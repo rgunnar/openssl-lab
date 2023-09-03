@@ -29,4 +29,10 @@ Add Certificate Authority as trusted in web browser
 
 s_client
 
-## 
+## chapter 07
+
+Splitting and combining certificate and private key
+
+## chapter 08
+
+OpenSSL batch mode
