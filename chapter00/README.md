@@ -298,7 +298,7 @@ The command for signing the certificate request is:
 
 `openssl x509 -signkey rsa_key.pem -in certificate.csr -req -days 365 -out certificate.pem`
 
-And the output may look like:
+This will sign the certificate request and create a signed certificate, with a validity of one year, and the output may look like:
 ```
 Enter pass phrase for rsa_key.pem:
 Certificate request self-signature ok
