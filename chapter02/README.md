@@ -73,11 +73,11 @@ or using a variable
 
 In the CA section of the config file you can specify some things that are handy.
 
-`serial` for specifying the file containing the serial counter for certificates issued.
-`database` for specifying the database file containing issued certificates.
-`new_certs_dir` for specifying where issued certificates should be placed.
-`certificate` for specifying the path to the CA certificate.
-`private_key` for specifying the path to the CA private key file.
+* `serial` for specifying the file containing the serial counter for certificates issued.
+* `database` for specifying the database file containing issued certificates.
+* `new_certs_dir` for specifying where issued certificates should be placed.
+* `certificate` for specifying the path to the CA certificate.
+* `private_key` for specifying the path to the CA private key file.
 
 For instance:
 
