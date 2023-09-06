@@ -188,7 +188,7 @@ Certificate:
 And we have a certificate database (certindex.txt) which mey look like:
 
 ```shell
-V	241008204827Z		5CCBBA64F9E1A81509CDAAB58DFD38F590CDDD5F	unknown	/CN=localhost/emailAddress=my.name@omegapoint.se/O=Omegapoint AB/OU=R&D/L=Stockholm/ST=Stockholm/C=SEshell
+V	241008204827Z		5CCBBA64F9E1A81509CDAAB58DFD38F590CDDD5F	unknown	/CN=localhost/emailAddress=my.name@omegapoint.se/O=Omegapoint AB/OU=R&D/L=Stockholm/ST=Stockholm/C=SE
 ```
 
 Where `V` stands for Valid. We also have a copy of the certificate in the server_certificates directory, with the filename being the serialnumber.
