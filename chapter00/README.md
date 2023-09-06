@@ -1,6 +1,6 @@
 # Chapter 00
 
-Create a self-signed certificate
+# Create a self-signed certificate
 
 ## Generating a key
 

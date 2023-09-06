@@ -1,6 +1,6 @@
 # Chapter 02
 
-## OpenSSL config file
+# OpenSSL config file
 
 The config file can be used to configure all kinds of stuff, and is very powerful. We looked at using a rudimentary config file when we created the CA certificate.
 

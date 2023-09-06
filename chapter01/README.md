@@ -1,6 +1,6 @@
 # Chapter 01
 
-Create a CA (Certificate Authority)
+# Create a CA (Certificate Authority)
 
 The certificate authority is signs certificate requests, creating ceertificates. The CA also manages the certificates, maintaining CRLs (Certificate Revocation Lists) etc.
 We will start by creating the root certificate for the CA.

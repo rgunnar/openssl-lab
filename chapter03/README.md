@@ -1,6 +1,6 @@
 # Chapter 03
 
-Issue a web server certificate
+# Issue a web server certificate
 
 ## Geneting a key for the web server certificate
 
