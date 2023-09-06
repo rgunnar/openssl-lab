@@ -287,7 +287,7 @@ Certificate Request:
         27:b1:a2:c7:5a:3e:54:c9
 ```
 
-### Signing the certificate request with out private key
+### Signing the certificate request with our private key
 
 Lets sign the certificate request with out private key and create the certificate
 This can be done with the following command:
