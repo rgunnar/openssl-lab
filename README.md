@@ -1,4 +1,5 @@
 # openssl-lab
+
 OpenSSL lab kompetensdag 2023-09
 
 ## Chapter 00
@@ -11,7 +12,7 @@ Create a CA
 
 ## Chapter 02
 
-Use config file
+OpenSSL config file
 
 ## Chapter 03
 
@@ -27,12 +28,8 @@ Add Certificate Authority as trusted in web browser
 
 ## chapter 06
 
-s_client
+Use of s_client
 
 ## chapter 07
 
-Splitting and combining certificate and private key
-
-## chapter 08
-
-OpenSSL batch mode
+Splitting and combining certificates and private key, and other useful stuff
