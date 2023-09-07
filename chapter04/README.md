@@ -16,7 +16,7 @@ We'll copy the private key for our TLS certificate to an unprotected (no pass ph
 Place the certificate somewhere on the disk where it is appropriate, for instance in the `/etc/ssl/certs` and `/etc/ssl/private/` directories. We will also change owner and permissions on the private key file.
 
 ```shell
-sudo cp tls_certifcate.pem /etc/ssl/certs/
+sudo cp tls_certificate.pem /etc/ssl/certs/
 sudo mv tls_key_unprotected.pem /etc/ssl/private/
 sudo chown root:ssl-cert /etc/ssl/private/tls_key_unprotected.pem
 sudo chmod 640 /etc/ssl/private/tls_key_unprotected.pem

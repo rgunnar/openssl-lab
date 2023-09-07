@@ -46,9 +46,13 @@ State or Province Name (full name) [Stockholm]:Stockholm
 Country Name (2 letter code) [SE]:SE
 ```
 
+### And if we want t use batch mode (mode advanced)
+
 If we want to use the default values specified in the config file, we can use batch mode instead (same command with added `-batch`parameter:
 
 `openssl req -new -batch -key tls_key.pem -sha256 -out tls_certificate.csr -config openssl_tls.conf -extensions v3_req_server`
+
+## The CSR
 
 We can inspect the CSR using the following command:
 
@@ -73,6 +77,9 @@ We can now sign the TLS certificate using our CA certificate and key. We will pr
 
 `openssl x509 -req -in tls_certificate.csr -CA CA/ca_certificate.pem -CAkey CA/cakey.pem -CAcreateserial -sha256 -out tls_certificate.pem -extfile openssl_tls.conf -extensions v3_req_server`
 
+
+### Batch signing (more advanced)
+
 We can use batch more here as well with the config file specifying behaviour and data.
 
 First we need to create the "database" for storing info about the issued certificates. This can be done with:
@@ -81,9 +88,11 @@ First we need to create the "database" for storing info about the issued certifi
 
 The previous command created a serial file, so that is already done, otherwise we would need to create the serial file as well.
 
-The command for signing the certificate in batch more is:
+The command for signing the certificate in batch mode is (check openssl_tls.conf for directory structure for CA certificate and key etc):
 
 `openssl ca -batch -config openssl_tls.conf -in tls_certificate.csr -out tls_certificate.pem -extfile openssl_tls.conf -extensions v3_req_server`
+
+## The TLS certicate
 
 We now have a TLS certificate, which can look like:
 
@@ -184,6 +193,8 @@ Certificate:
         0e:a9:11:1a:95:b7:cf:5e:a1:9c:78:77:05:a3:1d:e3:85:5b:
         01:d8:3e:93:e0:0e:a2:ca
 ```
+
+### And if batch mode was used, we get the certificate database
 
 And we have a certificate database (certindex.txt) which mey look like:
 
