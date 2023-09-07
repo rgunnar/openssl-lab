@@ -5,13 +5,13 @@
 The certificate authority is signs certificate requests, creating ceertificates. The CA also manages the certificates, maintaining CRLs (Certificate Revocation Lists) etc.
 We will start by creating the root certificate for the CA.
 
-## Generate the key for the root certificate
+## Generate the key for the certificate
 
 This is explained in chapter00, so you can revisit that for instructions. We can call it e.g. ca.key for the CA certificate.
 
-## Creating the Root Certificate CSR
+## Creating the Certificate CSR
 
-There are certain properties the root certificate should have.
+There are certain properties the certificate should have.
 
 The is a x509, version 3, extension, which states that this is a Certificate Authority:
 ```
