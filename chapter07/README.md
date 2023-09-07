@@ -26,7 +26,7 @@ and
 
 ### Convertinf form DER to PEM
 
-`openssl x509 -in tls_certificate.der -inform DER -out tls_certificate.pem´
+`openssl x509 -in tls_certificate.der -inform DER -out tls_certificate.pem`
 
 ## Viewing a certificate in readable form
 
