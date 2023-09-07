@@ -34,7 +34,7 @@ emailAddress_default = ${email_address}
 
 ## Sections
 
-The config file can have different sections usig swuare parenthesis. For instance, the config file can have different sections for x509v3 extensions, used for different types of certificates. These can then be referenced using the `-extensions <section name>` on the command line or in a script.
+The config file can have different sections using square parenthesis. For instance, the config file can have different sections for x509v3 extensions, used for different types of certificates. These can then be referenced using the `-extensions <section name>` on the command line or in a script.
 
 ```
 [ req_web_server_cert ]
