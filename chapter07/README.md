@@ -18,7 +18,7 @@ PEM format is default for openssl, so these two commands are eqvivalent:
 
 and
 
-`openssl x509 -in tls_certificate.pem -inform PEM -text -noout´
+`openssl x509 -in tls_certificate.pem -inform PEM -text -noout`
 
 ### Converting from PEM to DER
 
