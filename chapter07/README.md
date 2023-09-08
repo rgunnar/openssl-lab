@@ -24,7 +24,7 @@ and
 
 `openssl x509 -in tls_certificate.pem -out tls_certificate.der -outform DER`
 
-### Converting form DER to PEM
+### Converting from DER to PEM
 
 `openssl x509 -in tls_certificate.der -inform DER -out tls_certificate.pem`
 
