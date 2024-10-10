@@ -48,6 +48,48 @@ To create a 4096 bit RSA key and store it in a file (encrypted with a pass phras
 
 `openssl genrsa -out rsa_key.pem -aes256 4096`
 
+We can use the `rsa` command to manage RSA keys.
+
+`openssl rsa [<parameters>]`
+
+```shell
+Usage: rsa [options]
+
+General options:
+ -help               Display this summary
+ -check              Verify key consistency
+ -*                  Any supported cipher
+ -engine val         Use engine, possibly a hardware device
+
+Input options:
+ -in val             Input file
+ -inform format      Input format (DER/PEM/P12/ENGINE)
+ -pubin              Expect a public key in input file
+ -RSAPublicKey_in    Input is an RSAPublicKey
+ -passin val         Input file pass phrase source
+
+Output options:
+ -out outfile        Output file
+ -outform format     Output format, one of DER PEM PVK
+ -pubout             Output a public key
+ -RSAPublicKey_out   Output is an RSAPublicKey
+ -passout val        Output file pass phrase source
+ -noout              Don't print key out
+ -text               Print the key in text
+ -modulus            Print the RSA key modulus
+ -traditional        Use traditional format for private keys
+
+PVK options:
+ -pvk-strong         Enable 'Strong' PVK encoding level (default)
+ -pvk-weak           Enable 'Weak' PVK encoding level
+ -pvk-none           Don't enforce PVK encoding
+
+Provider options:
+ -provider-path val  Provider load path (must be before 'provider' argument if required)
+ -provider val       Provider to load (can be specified multiple times)
+ -propquery val      Property query used when fetching algorithms
+```
+
 To store the public key for the private key in a separate file we can use the following command:
 
 `openssl rsa -in rsa_key.pem -pubout -out rsa_key.pub.pem`
