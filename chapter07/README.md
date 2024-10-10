@@ -40,9 +40,13 @@ or
 
 ## Checking the consistency of a private key
 
-The consistency of a private key can be checked with:
+The consistency of a RSA private key can be checked with:
 
 `openssl rsa -in tls_key.pem -check -noout`
+
+The consistency of an Elliptic Curve private key can be checked with:
+
+`openssl ec -in tls_key.pem -check -noout`
 
 ## Checking if a private key belongs to the public key in a certificate
 
@@ -50,9 +54,19 @@ Sometimes it is not known if a file with a private key is the private key corres
 
 Export public key from both certificate and private key (in pem format in this example), and compare them:
 
+For a certificate with an RSA key:
+
 ```shell
 openssl x509 -in tls_certificate.pem -noout -pubkey > pub_key_from_cert.pem
 openssl rsa -in tls_key.pem -pubout > pub_key_from_priv_key.pem
+diff -y pub_key_from_priv_key.pem pub_key_from_cert.pem
+```
+
+And if the public key is an elliptic curve key:
+
+```shell
+openssl x509 -in tls_certificate.pem -noout -pubkey > pub_key_from_cert.pem
+openssl ec -in ec_key2.pem -pubout > pub_key_from_priv_key.pem
 diff -y pub_key_from_priv_key.pem pub_key_from_cert.pem
 ```
 
