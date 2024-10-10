@@ -95,6 +95,8 @@ If we want to have the public key in a file as well, we can store it using opens
 
 This stores the public key in file `rsa_key.pub.pem`.
 
+For more info about generating different kind of keys, see [chapter 08](chapter08/README.md)
+
 ## Creating a self-signed certificate
 
 We will not create a self-signed certificate using the key pair we created.
