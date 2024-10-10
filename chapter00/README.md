@@ -95,7 +95,7 @@ If we want to have the public key in a file as well, we can store it using opens
 
 This stores the public key in file `rsa_key.pub.pem`.
 
-For more info about generating different kind of keys, see [chapter 08](chapter08/README.md)
+For more info about generating different kind of keys, see [Chapter 08](../chapter08/README.md)
 
 ## Creating a self-signed certificate
 
@@ -174,7 +174,7 @@ Provider options:
  -propquery val        Property query used when fetching algorithms
 ```
 
-The command for creating a CSR can also generate a new key, and the use the newly generated key for the CSR, but we will use the key we already created.
+The command for creating a CSR can also generate a new key, and use the newly generated key for the CSR, but we will use the key we already created.
 
 `openssl req -new -key rsa_key.pub.pem -out certificate.csr`
 

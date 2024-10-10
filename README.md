@@ -26,14 +26,14 @@ OpenSSL lab kompetensdag 2024-10
 
 [Add Certificate Authority as trusted in web browser](chapter05/README.md)
 
-## chapter 06
+## Chapter 06
 
 [Use of s_client](chapter06/README.md)
 
-## chapter 07
+## Chapter 07
 
 [Splitting and combining certificates and private key, and other useful stuff](chapter07/README.md)
 
-## chapter 08
+## Chapter 08
 
-[RSA and Elliptic Curve keys](chapter08/README.md)
+[Creating RSA and Elliptic Curve keys](chapter08/README.md)

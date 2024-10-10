@@ -9,7 +9,7 @@ The command is designed to be interactive, so after connection is done, you can 
 ## Use s_client to connect to your web server
 
 `echo | openssl s_client -connect localhost:443 -showcerts`
-The use of "echo |" is to get teh result without having to wait for the server to timeout since the command is interactive.
+The use of "echo |" is to get the result without having to wait for the server to timeout since the command is interactive.
 
 The output will be something like this
 ```shell
