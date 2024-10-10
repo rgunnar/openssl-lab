@@ -44,6 +44,13 @@ Parameters:
 
 For the number of bits it is now recommended to use at least 3072 bits. Severeal organisations will not trust 2k keys in a couple of years.
 
+To create a 4096 bit RSA key and store it in a file (encrypted with a pass phrase), use the following command:
+
+`openssl genrsa -out rsa_key.pem -aes256 4096`
+
+To store the public key for the private key in a separate file we can use the following command:
+
+`openssl rsa -in rsa_key.pem -pubout -out rsa_key.pub.pem`
 
 
 ## Crearing Elliptic Curve keys
@@ -221,7 +228,7 @@ Provider options:
 Order of options may be important!  See the documentation.
 ``
 
-For generating an elliptic curve key with are parameters (curve secp256k1), we can use the following command:
+For generating an elliptic curve key with are parameters (curve secp256k1 and encrypted with a pass phrase), we can use the following command:
 
 `openssl genpkey -paramfile our_curve.pem -out ec_key.pem -aes256`
 
