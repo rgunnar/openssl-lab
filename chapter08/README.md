@@ -315,7 +315,7 @@ Provider options:
 
 If we want to store the public key for a private key in a separate file, we can use the following command:
 
-`openssl % openssl ec -in ec_key.pem -pubout -out ec_key.pub.pem`
+`openssl ec -in ec_key.pem -pubout -out ec_key.pub.pem`
 
 This command will read the private key in file ec_key.pem and store the public key in the file ec_key.pub.pem.
 
