@@ -136,7 +136,7 @@ Provider options:
  -propquery val      Property query used when fetching algorithms
 ```
 
-To be able to generate an elliptic curve key, we need to choose a curve. Curves that OpenSSL supports can be listed with the following command
+To be able to generate an elliptic curve key, we need to choose a curve. Curves that OpenSSL supports can be listed with the following command:
 
 `openssl ecparam -list_curves`
 
@@ -237,7 +237,7 @@ For creating a parameter file for, e.g. for curve secp256k1, we'll use the follo
 
 `openssl ecparam -name secp256k1 -out our_curve.pem`
 
-This will store the parameters for curve secp256k1 in a file calles our_curve.pem.
+This will store the parameters for curve secp256k1 (specifically the name of the curve) in a file named our_curve.pem.
 
 To generate a key for that curve we can use the `genpkey` command:
 
@@ -268,11 +268,13 @@ Provider options:
  -provider val       Provider to load (can be specified multiple times)
  -propquery val      Property query used when fetching algorithms
 Order of options may be important!  See the documentation.
-``
+```
 
-For generating an elliptic curve key with are parameters (curve secp256k1 and encrypted with a pass phrase), we can use the following command:
+For generating an elliptic curve key with our parameters (curve secp256k1 and encrypted with a pass phrase), we can use the following command:
 
 `openssl genpkey -paramfile our_curve.pem -out ec_key.pem -aes256`
+
+This will generate an elliptic curve key for the parameters specified in the our_curve.pem file and place the output in a file named ec_key.pem, and the `-aes256` parameter crypts the key with a pass phrase.
 
 We can use the `ec` command to manage elliptic curve keys:
 
@@ -315,7 +317,9 @@ If we want to store the public key for a private key in a separate file, we can 
 
 `openssl % openssl ec -in ec_key.pem -pubout -out ec_key.pub.pem`
 
-This file can be used to create a CSR, see [Chapter 03](../chapter03/README.md)
+This command will read the private key in file ec_key.pem and store the public key in the file ec_key.pub.pem.
+
+This public key file can for instance be used to create a CSR, see [Chapter 03](../chapter03/README.md)
 
 A certificate created with these elliptic curve parameters will have a refernce (OID) to the curve in the certificate, for instance:
 
