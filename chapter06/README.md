@@ -9,9 +9,11 @@ The command is designed to be interactive, so after connection is done, you can 
 ## Use s_client to connect to your web server
 
 `echo | openssl s_client -connect localhost:443 -showcerts`
+
 The use of "echo |" is to get the result without having to wait for the server to timeout since the command is interactive.
 
-The output will be something like this
+The output will be something like this:
+
 ```shell
 CONNECTED(00000003)
 Can't use SSL_get_servername
@@ -132,7 +134,9 @@ DONE
 ```
 
 ## Compare with a host using a trusted root certificate
-If you look in the begin of the result from the run above you will see "unable to get local issuer certificate" etc
+
+If you look at the beginning of the result from the run above you will see "unable to get local issuer certificate" etc
+
 ```shell
 Can't use SSL_get_servername
 depth=0 CN = localhost, O = Omegapoint AB, OU = R&D, emailAddress = my.name@omegapoint.se, L = Stockholm, ST = Stockholm, C = SE
@@ -144,4 +148,5 @@ verify return:1
 depth=0 CN = localhost, O = Omegapoint AB, OU = R&D, emailAddress = my.name@omegapoint.se, L = Stockholm, ST = Stockholm, C = SE
 verify return:1
 ```
+
 Try the same command against a web server with official certificates, like for instance omegapoint.se

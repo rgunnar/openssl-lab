@@ -12,11 +12,11 @@ When creating a CSR for a web certificate, we need to take into account some pro
 
 These are basically (as of August 21, 2023):
 
-* TLS server certificates and issuing CAs using RSA keys must use key sizes greater than or equal to 2048 bits.
+* TLS server certificates and issuing CAs using RSA keys must use key sizes greater than or equal to 2048 bits. (Soon to be minimum of 3072)
 * TLS server certificates and issuing CAs must use a hash algorithm from the SHA-2 family in the signature algorithm.
 * TLS server certificates must present the DNS name of the server in the Subject Alternative Name extension of the certificate.
 * TLS server certificates must contain an ExtendedKeyUsage (EKU) extension containing the id-kp-serverAuth OID.
-* TLS server certificates issued on or after September 1, 2020 00:00 GMT/UTC must not have a validity period greater than 398 days.
+* TLS server certificates issued on or after September 1, 2020 00:00 GMT/UTC must have a validity period shorter than or equal to 398 days.
 
 So we need to create a private key corresponding to the requirements, we need to use a hash function corresponding to the requierments and we specify SAN (Subject Alternate Name) in the CSR.
 
